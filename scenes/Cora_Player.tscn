@@ -103,14 +103,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eoyc0"]
 size = Vector2(22, 43)
 
-[node name="Cora" type="CharacterBody2D"]
+[node name="Cora" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_qiiff")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_df3v1")
-animation = &"Punch"
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -1.5)
