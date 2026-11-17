@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://dinjrn5eeoe3e"]
+[gd_scene load_steps=18 format=3 uid="uid://dinjrn5eeoe3e"]
 
 [ext_resource type="Script" path="res://scripts/player_(character_body_2d).gd" id="1_qiiff"]
 [ext_resource type="Texture2D" uid="uid://cw8bkpulvwaym" path="res://Aseprite/Characters/Cora/CoraIdle-Sheet.png" id="2_jdun2"]
+[ext_resource type="Texture2D" uid="uid://bw4uac8qcvgk6" path="res://Aseprite/Characters/Cora/CoraPunch-Sheet.png" id="3_qje6n"]
 [ext_resource type="Texture2D" uid="uid://dxhds1jpxfu0j" path="res://Aseprite/Characters/Cora/CoraWalking-Sheet.png" id="3_y63gj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dbp0v"]
@@ -19,6 +20,18 @@ region = Rect2(64, 0, 32, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_c3ryx"]
 atlas = ExtResource("2_jdun2")
 region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqomj"]
+atlas = ExtResource("3_qje6n")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1rbg"]
+atlas = ExtResource("3_qje6n")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8u4f0"]
+atlas = ExtResource("3_qje6n")
+region = Rect2(64, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jf8kn"]
 atlas = ExtResource("3_y63gj")
@@ -56,6 +69,20 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqomj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1rbg")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_8u4f0")
+}],
+"loop": true,
+"name": &"Punch",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 0.5,
 "texture": SubResource("AtlasTexture_jf8kn")
 }, {
@@ -83,8 +110,7 @@ script = ExtResource("1_qiiff")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_df3v1")
-animation = &"Walk"
-frame_progress = 0.244423
+animation = &"Punch"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -1.5)
