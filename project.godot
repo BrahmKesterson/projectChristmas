@@ -24,6 +24,14 @@ window/size/window_height_override=720
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
+[file_customization]
+
+folder_colors={
+"res://Free Assets/": "yellow",
+"res://scenes/": "green",
+"res://scripts/": "red"
+}
+
 [input]
 
 move_up={

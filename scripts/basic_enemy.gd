@@ -16,7 +16,15 @@ var player: CharacterBody2D
 func _ready() -> void:
 	motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
 	player = get_tree().get_first_node_in_group("player") as CharacterBody2D
+	randomize_appearance()
 
+func randomize_appearance() -> void:
+	var red = randf_range(0.5, 1.0)
+	var green = randf_range(0.5, 1.0)
+	var blue = randf_range(0.5, 1.0)
+
+	animated_sprite_2d.modulate = Color(red, green, blue)
+	
 func _physics_process(_delta: float) -> void:
 	if not is_instance_valid(player):
 		velocity = Vector2.ZERO
