@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dinjrn5eeoe3e"]
+[gd_scene load_steps=18 format=3 uid="uid://cwb2a812oiqdf"]
 
 [ext_resource type="Script" path="res://scripts/player_(character_body_2d).gd" id="1_qiiff"]
 [ext_resource type="Texture2D" uid="uid://cw8bkpulvwaym" path="res://Aseprite/Characters/Cora/CoraIdle-Sheet.png" id="2_jdun2"]
